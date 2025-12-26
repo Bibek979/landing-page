@@ -1,0 +1,55 @@
+ @media (max-width: 426px) {
+     /* Styles for devices with screen width less than 426px */
+
+     * {
+         box-sizing: border-box;
+     }
+
+     body {
+         margin: 0;
+         padding: 0;
+     }
+
+     .navbar {
+         display: none;
+     }
+
+     #hero-section {
+        padding-top: 0;
+        background-image: url("../../update/images/happy-man-small.png");
+        background-size: cover;
+        
+     }
+
+     .hero-img-block {
+        display: none;
+     }
+     
+     .hero-title{
+        text-transform: uppercase;
+
+     }
+ }
+
+
+
+
+
+
+.hero-title {
+    font-size: 10vw;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+
+.hero-title-small{
+    font-size: 1.5vw;
+    text-align: right;
+}
+
+.hero-title-container {
+    margin: 2rem 0;
+}
+.mobile-img-controller {
+    display: none;
+}

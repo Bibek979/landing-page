@@ -15,8 +15,8 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
     font-family: var(--font-body);
     overflow-x: hidden;
 }
@@ -43,6 +43,12 @@ h6 {
     font-size: 1.5rem;
 }
 
+.navbar>.container {
+    width: 200px;
+    justify-content: flex-end;
+}
+
+
 .nav-link {
     color: #ccc !important;
     font-size: 0.9rem;
@@ -61,6 +67,7 @@ h6 {
     align-items: center;
     position: relative;
     padding-top: 80px;
+    background-color: var(--bg-color) !important;
 }
 
 .hero-title {
@@ -126,17 +133,6 @@ h6 {
 }
 
 .project-card {
-    background-color: #fff;
-    /* White cards as per design snippet? No, looks like dark cards with images. Wait, the design shows dark cards for "HOMELABBING" */
-    /* Actually, looking closely at the "PROJECTS" section in the image:
-       It shows cards with a white header "HOMELABBING" and an image below it? 
-       Or is it an image with a white label on top? 
-       Let's assume dark card with image and text overlay or below. 
-       Wait, the "TESTIMONIALS" are white cards. 
-       The "PROJECTS" cards look like they have a white top bar? 
-       Let's stick to a clean dark card style for projects to match the theme, or follow the image closely.
-       Image: "HOMELABBING" is in a white box at the top of the card. Image below. Text description below image.
-    */
     background-color: #1a1a1a;
     border: none;
     border-radius: 10px;
@@ -176,7 +172,6 @@ h6 {
     text-align: center;
     position: relative;
     margin-top: 30px;
-    /* Space for profile pic overlap if needed, or just layout */
 }
 
 .testimonial-text {
@@ -252,12 +247,6 @@ h6 {
 
 .contact-form-container {
     background-color: #d9d9d9;
-    /* Light grey background for form area as seen in image? 
-    Actually the image shows the form fields on a dark background, but the fields themselves are white/grey.
-    Let's look at "LET'S CHAT". 
-    Left side: Form fields (Name, Email, Phone, Message) are white inputs on the dark background.
-    Right side: "CONNECT WITH ME" and social circles.
-    */
 }
 
 .form-control {
