@@ -19,7 +19,7 @@ const openMenu = () => {
   sideMenu.classList.add('active');
   menuOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
-  hamburgerImg.src = './assets/img/close-icon.png';
+  hamburgerImg.src = '/assets/img/close-icon.png';
   hamburgerImg.alt = 'Close';
 };
 
@@ -28,7 +28,7 @@ const closeMenu = () => {
   sideMenu.classList.remove('active');
   menuOverlay.classList.remove('active');
   document.body.style.overflow = 'auto';
-  hamburgerImg.src = './assets/img/hamburger.png';
+  hamburgerImg.src = '/assets/img/hamburger.png';
   hamburgerImg.alt = 'Menu';
 };
 
