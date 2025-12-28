@@ -44,7 +44,7 @@
       <a href="#testimonials" class="side-menu-link">Testimonials</a>
       <a href="#milestones" class="side-menu-link">Milestones</a>
       <a href="#contact" class="side-menu-link">Contact</a>
-      <button class="side-menu-link resume-btn">Resume 🖨️</button>
+      <button class="side-menu-link resume-btn" type="button" onclick="downloadResume()">Resume 🖨️</button>
     </nav>
   </div>
 
@@ -198,11 +198,14 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <div class="container">
+    <div class="success-chat-inactive" id="success-chat">
+      <p class="heading"><span>🎉</span><br>I will get back to you soon.</p>
+    </div>
+    <div class="container" id="contact-form-div">
       <h2>LET'S CHAT</h2>
       <div class="row">
         <div class="col-lg-6">
-          <form>
+          <form id="contact-form">
             <div class="mb-3">
               <label class="form-label text-uppercase small">Name:</label>
               <input type="text" class="form-control">

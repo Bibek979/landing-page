@@ -55,3 +55,15 @@ function downloadResume() {
   link.click();
   document.body.removeChild(link);
 }
+
+// Handling Contact form data
+const contactFormDiv = document.getElementById("contact-form-div");
+const successDiv = document.getElementById("success-chat");
+const onlyForm = document.getElementById("contact-form");
+
+onlyForm.addEventListener("submit", function(event){
+  event.preventDefault();
+  successDiv.className = "success-chat-active";
+  contactFormDiv.style.display = "none";
+
+})

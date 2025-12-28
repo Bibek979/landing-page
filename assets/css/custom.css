@@ -196,3 +196,12 @@
  .hero-section-intro {
      margin: 3rem 0;
  }
+
+ .success-chat-inactive {
+    display: none;
+ }
+
+ .success-chat-active {
+    display: block;
+    background-color: rgb(136, 187, 59);
+ }
