@@ -44,8 +44,8 @@ h6 {
 }
 
 .navbar>.container {
-    width: 200px;
-    justify-content: flex-end;
+    width: 50%;
+    justify-content: space-evenly;
 }
 
 
@@ -67,9 +67,22 @@ h6 {
     align-items: center;
     position: relative;
     padding-top: 80px;
-    background-color: var(--bg-color) !important;
+    background-image: url("../img/happy-man.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
 
+.nav-button {
+    border: none;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2% 4%;
+    text-transform: lowercase;
+    font-size: 0.8rem;
+}
 .hero-title {
     font-size: 4rem;
     line-height: 1.1;
@@ -100,12 +113,6 @@ h6 {
     object-fit: contain;
 }
 
-/* Experience Section */
-#experience {
-    padding: 100px 0;
-    background-color: #050505;
-}
-
 .experience-card {
     background-color: #111;
     border: 1px solid #333;
@@ -125,11 +132,6 @@ h6 {
     margin: 0 10px;
     filter: grayscale(0%);
     /* Keep original colors as per design */
-}
-
-/* Projects Section */
-#projects {
-    padding: 100px 0;
 }
 
 .project-card {
@@ -159,11 +161,6 @@ h6 {
     font-size: 0.9rem;
 }
 
-/* Testimonials */
-#testimonials {
-    padding: 100px 0;
-}
-
 .testimonial-card {
     background-color: #fff;
     color: #000;
@@ -190,10 +187,12 @@ h6 {
 
 /* Milestones */
 #milestones {
-    padding: 50px 0;
+    min-height: 40vh;
+    display: flex;
 }
 
 .milestone-bar {
+    flex-grow: 1;
     background-color: #222;
     border-radius: 50px;
     padding: 20px 40px;
@@ -207,6 +206,7 @@ h6 {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding: 2% 0;
 }
 
 .milestone-circle {
@@ -237,11 +237,6 @@ h6 {
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1px;
-}
-
-/* Contact Section */
-#contact {
-    padding: 100px 0;
 }
 
 .contact-form-container {
@@ -275,4 +270,9 @@ h6 {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+}
+
+.milestones-container {
+    display: flex;
+    flex-direction: column;
 }
