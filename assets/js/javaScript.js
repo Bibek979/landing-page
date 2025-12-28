@@ -38,3 +38,20 @@ menuOverlay.addEventListener('click', closeMenu);
 sideMenuLinks.forEach(link => {
   link.addEventListener('click', closeMenu);
 });
+
+// Store button link handler
+const shopButton = document.getElementById("store-button");
+shopButton.addEventListener("click", function(){
+  window.location.href = "https://shop.bib3k.me";
+})
+
+
+// Downloading resume button 
+function downloadResume() {
+  const link = document.createElement('a');
+  link.href="/assets/others/bibek-resume.pdf";
+  link.download = "Bibekananda-Besra-resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
