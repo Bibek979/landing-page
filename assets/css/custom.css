@@ -203,7 +203,7 @@
 
  .success-chat-active {
     display: block;
-    background-color: rgb(136, 187, 59);
+    height: 20vh;
  }
 
 #navbar {
@@ -211,4 +211,15 @@
     top: 0;
     width: 100%;
     transition: top 0.3s ease;
+}
+.success-message-holder {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    background-color: crimson;
+    border-radius: 20px;
 }

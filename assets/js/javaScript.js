@@ -63,6 +63,6 @@ const onlyForm = document.getElementById("contact-form");
 
 onlyForm.addEventListener("submit", function(event){
   event.preventDefault();
-  successDiv.className = "success-chat-active";
+  successDiv.className = "container success-chat-active";
   contactFormDiv.style.display = "none";
 })
