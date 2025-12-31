@@ -1,3 +1,5 @@
+
+
 // Mobile Menu Handler
 const hamburgerMenu = document.getElementById('hamburger-menu');
 const hamburgerImg = hamburgerMenu.querySelector('img');
@@ -41,7 +43,7 @@ sideMenuLinks.forEach(link => {
 
 // Store button link handler
 const shopButton = document.getElementById("store-button");
-shopButton.addEventListener("click", function(){
+shopButton.addEventListener("click", function () {
   window.location.href = "https://shop.bib3k.me";
 })
 
@@ -49,20 +51,58 @@ shopButton.addEventListener("click", function(){
 // Downloading resume button 
 function downloadResume() {
   const link = document.createElement('a');
-  link.href="/assets/others/bibek-resume.pdf";
+  link.href = "/assets/others/bibek-resume.pdf";
   link.download = "Bibekananda-Besra-resume.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
 }
 
+
+// Sending form
+async function sendForm() {
+  try {
+    const response = await fetch("https://bib3k.app.n8n.cloud/webhook-test/lead-path", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(formdetails)
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+
+    if (data.response === 'SENT') {
+      successDiv.className = "container success-chat-active";
+      contactFormDiv.style.display = "none";
+    }
+  } catch (error) {
+    document.getElementById("contactsubmitbtn").innerHTML = "Try Again";
+    document.getElementById("contactsubmitbtn").style.backgroundColor = "red";
+  }
+}
+
+
+
 // Handling Contact form data
 const contactFormDiv = document.getElementById("contact-form-div");
 const successDiv = document.getElementById("success-chat");
 const onlyForm = document.getElementById("contact-form");
 
-onlyForm.addEventListener("submit", function(event){
-  event.preventDefault();
-  successDiv.className = "container success-chat-active";
-  contactFormDiv.style.display = "none";
+onlyForm.addEventListener("submit", function (event) {
+  if (!document.getElementById("company")) {
+    return;
+  } else {
+    event.preventDefault();
+    if (formValidation()) {
+      sendForm();
+    } else {
+      alert("Form details missing!");
+    }
+  }
 })
+
+

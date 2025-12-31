@@ -147,13 +147,6 @@
      #contact div h2 {
          margin: 0 0 5% 0 !important;
      }
-
-     /* #milestones {
-        height: 50vh;
-     } */
-     .test-font-user {
-         color: black;
-     }
  }
 
  @media (min-width: 427px) {
@@ -168,6 +161,10 @@
      #contact {
          margin: 5% 0 0 0;
      }
+ }
+
+ .test-font-user {
+     color: black;
  }
 
  .navbar-mobile {
@@ -198,28 +195,29 @@
  }
 
  .success-chat-inactive {
-    display: none;
+     display: none;
  }
 
  .success-chat-active {
-    display: block;
-    height: 20vh;
+     display: block;
+     height: 20vh;
  }
 
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: top 0.3s ease;
-}
-.success-message-holder {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    margin: auto;
-    text-align: center;
-    height: 100%;
-    justify-content: center;
-    background-color: crimson;
-    border-radius: 20px;
-}
+ #navbar {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     transition: top 0.3s ease;
+ }
+
+ .success-message-holder {
+     display: flex;
+     flex-direction: column;
+     width: 40%;
+     margin: auto;
+     text-align: center;
+     height: 100%;
+     justify-content: center;
+     background-color: crimson;
+     border-radius: 20px;
+ }

@@ -214,33 +214,34 @@
           <form id="contact-form">
             <div class="mb-3">
               <label class="form-label text-uppercase small">Name:</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" placeholder="Rahul Das" id="name">
             </div>
             <div class="mb-3">
               <label class="form-label text-uppercase small">Email:</label>
-              <input type="email" class="form-control">
+              <input type="email" class="form-control" id="email">
             </div>
             <div class="mb-3">
               <label class="form-label text-uppercase small">Phone Number:</label>
-              <input type="tel" class="form-control">
+              <input type="tel" class="form-control" id="phone">
             </div>
             <div class="mb-3">
               <label class="form-label text-uppercase small">Message:</label>
-              <textarea class="form-control" rows="4"></textarea>
+              <textarea class="form-control" rows="4" id="textmessage"></textarea>
             </div>
-            <button type="submit" class="btn btn-submit">Submit</button>
+            <input type="text" name="company" style="display: none;" id="company">
+            <button type="submit" class="btn btn-submit" id="contactsubmitbtn">Submit</button>
           </form>
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
           <h4 class="mb-4">CONNECT WITH ME ~</h4>
           <div>
-            <a href="#" class="social-circle">
+            <a href="https://www.linkedin.com/in/bibekananda-besra" target="_blank" class="social-circle">
               <img src="./assets/img/icons8-linkedin.png" width="24" alt="LinkedIn">
             </a>
-            <a href="#" class="social-circle">
-              <img src="./assets/img/icons8-instagram-96.png" width="24" alt="Instagram">
+            <a href="https://github.com/Bibek979" class="social-circle">
+              <img src="./assets/img/github.png" width="24" alt="github">
             </a>
-            <a href="#" class="social-circle">
+            <a href="https://www.youtube.com/@bibekanandabesra6415" target="_blank" class="social-circle">
               <img src="./assets/img/icons8-youtube.png" width="24" alt="YouTube">
             </a>
           </div>
@@ -256,7 +257,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="assets/js/javaScript.js" defer></script>
+  <script src="assets/js/javaScript.js"></script>
   <script src="assets/js/otherScript.js"></script>
   <script>
     AOS.init({
