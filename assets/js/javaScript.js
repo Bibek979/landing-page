@@ -62,7 +62,7 @@ function downloadResume() {
 // Sending form
 async function sendForm() {
   try {
-    const response = await fetch("https://bib3k.app.n8n.cloud/webhook-test/lead-path", {
+    const response = await fetch("https://bib3k.app.n8n.cloud/webhook/lead-path", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(formdetails)
