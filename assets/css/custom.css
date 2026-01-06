@@ -221,3 +221,42 @@
      background-color: crimson;
      border-radius: 20px;
  }
+
+
+ /* ===== EXPERIENCE SLIDER ===== */
+
+ .slide-wrapper {
+     position: relative;
+     display: grid;
+     /* Stack slides using grid */
+     grid-template-columns: 1fr;
+     align-items: start;
+     width: 100%;
+     overflow: hidden;
+     /* Keeps sliding cards from being visible outside wrapper */
+ }
+
+ .experience-slide {
+     grid-area: 1 / 1 / 2 / 2;
+     /* All slides occupy the exact same grid cell */
+     width: 100%;
+     /* Remove position: absolute if it was there */
+     /* Remove top/left if they were there */
+ }
+
+ .experience-card {
+     max-width: 900px;
+     margin: 0 auto;
+     /* Keep it centered */
+     padding: 40px;
+     background: #111;
+     border-radius: 16px;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+ }
+
+ /* tool icons */
+ .tool-icons img {
+     width: 36px;
+     height: 36px;
+     object-fit: contain;
+ }
