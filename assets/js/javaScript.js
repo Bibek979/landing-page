@@ -58,6 +58,75 @@ function downloadResume() {
   document.body.removeChild(link);
 }
 
+// Handling Contact form data
+const onlyForm = document.getElementById("contact-form");
+
+// Toast helper using Bootstrap
+function showToast(type, message) {
+  let container = document.getElementById("toast-area");
+  if (!container) {
+    container = document.createElement("div");
+    container.id = "toast-area";
+    container.className = "toast-container position-fixed bottom-0 end-0 p-3";
+    container.style.zIndex = "1100";
+    document.body.appendChild(container);
+  }
+
+  const bgClass = (
+    type === "success" ? "bg-success" :
+    type === "warning" ? "bg-warning text-dark" :
+    type === "info" ? "bg-info text-dark" :
+    "bg-danger"
+  );
+
+  const toastEl = document.createElement("div");
+  toastEl.className = `toast align-items-center text-white ${bgClass} border-0`;
+  toastEl.setAttribute("role", "alert");
+  toastEl.setAttribute("aria-live", "assertive");
+  toastEl.setAttribute("aria-atomic", "true");
+  toastEl.innerHTML = `
+    <div class="d-flex">
+      <div class="toast-body">${message}</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  `;
+  container.appendChild(toastEl);
+  const toast = new bootstrap.Toast(toastEl, { delay: 4000 });
+  toast.show();
+}
+
+onlyForm.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  // Honeypot: if filled, abort silently
+  const companyEl = document.getElementById("company");
+  if (companyEl && companyEl.value) {
+    return;
+  }
+
+  const result = formValidation();
+  if (!result || result.ok === false) {
+    const msg = result && Array.isArray(result.errors)
+      ? result.errors.join(" ")
+      : "Please complete all required fields correctly.";
+    showToast("danger", msg);
+    return;
+  }
+
+  // Disable button while sending
+  const btn = document.getElementById("contactsubmitbtn");
+  const originalText = btn.innerText;
+  btn.disabled = true;
+  btn.innerText = "Sending...";
+
+  try {
+    await sendForm();
+  } finally {
+    btn.disabled = false;
+    btn.innerText = originalText;
+  }
+});
+
 
 // Sending form
 async function sendForm() {
@@ -71,38 +140,16 @@ async function sendForm() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-
     const data = await response.json();
-    console.log(data);
-
     if (data.response === 'SENT') {
-      successDiv.className = "container success-chat-active";
-      contactFormDiv.style.display = "none";
+      showToast("success", "Message sent! I’ll get back soon.");
     }
   } catch (error) {
-    document.getElementById("contactsubmitbtn").innerHTML = "Try Again";
-    document.getElementById("contactsubmitbtn").style.backgroundColor = "red";
+    showToast("danger", "Failed to send. Please try again.");
   }
 }
 
 
 
-// Handling Contact form data
-const contactFormDiv = document.getElementById("contact-form-div");
-const successDiv = document.getElementById("success-chat");
-const onlyForm = document.getElementById("contact-form");
-
-onlyForm.addEventListener("submit", function (event) {
-  if (!document.getElementById("company")) {
-    return;
-  } else {
-    event.preventDefault();
-    if (formValidation()) {
-      sendForm();
-    } else {
-      alert("Form details missing!");
-    }
-  }
-})
 
 

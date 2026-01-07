@@ -11,11 +11,11 @@
      }
 
      #hero-section {
-         padding-top: 0;
+         padding-top: 72px;
          background-image: url("../img/happy-man-small.png");
          background-size: contain;
          background-repeat: no-repeat;
-         background-attachment: fixed;
+         background-attachment: scroll;
          background-position-x: right;
          background-position-y: bottom;
          align-items: end;
@@ -27,6 +27,28 @@
 
      .hero-title {
          text-transform: uppercase;
+         font-size: clamp(2rem, 8.5vw, 3rem);
+         line-height: 1.1;
+         margin: 0 0 0.75rem 0;
+     }
+
+     .hero-title-small {
+         font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+         text-align: left;
+     }
+
+     .hero-title-container {
+         margin-top: 1.25rem;
+     }
+
+     #hero-section .container {
+         padding-left: 16px;
+         padding-right: 16px;
+         padding-bottom: 40%;
+     }
+
+     .hero-section-intro {
+         margin: 1.5rem 0 0 0;
      }
 
      .navbar {
@@ -41,21 +63,28 @@
 
      .navbar-mobile {
          display: flex !important;
-         justify-content: end;
-         margin: 0 2%;
+         justify-content: flex-end;
+         align-items: center;
+         width: 100%;
+         padding: 0.5rem 1rem;
      }
 
      .hamburger-btn {
          background: none;
          border: none;
          cursor: pointer;
-         padding: 0;
-         width: 10%;
+         padding: 0.5rem;
+         width: 40px;
+         height: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
      }
 
      .hamburger-btn img {
          width: 100%;
-         height: auto;
+         height: 100%;
+         object-fit: contain;
      }
 
      /* Side Menu Styles */
@@ -131,6 +160,7 @@
          pointer-events: auto;
      }
 
+
      #experience,
      #projects,
      #testimonials,
@@ -139,6 +169,9 @@
          padding: 0 0;
          padding-bottom: 10%;
      }
+     #experience {
+        padding-top: 10%;
+     }
 
      #experience div h2,
      #projects div h2,
@@ -146,6 +179,40 @@
      #milestones div h2,
      #contact div h2 {
          margin: 0 0 5% 0 !important;
+     }
+
+     /* Experience section mobile fixes */
+     html, body {
+         overflow-x: hidden;
+     }
+
+     .slide-wrapper {
+         overflow: hidden;
+         padding: 0;
+     }
+
+     .experience-card {
+         padding: 20px 15px;
+         margin: 0 10px;
+         max-width: 100%;
+     }
+
+     .experience-card h4 {
+         font-size: 1.2rem;
+     }
+
+     .experience-card p {
+         font-size: 0.9rem;
+     }
+
+     .tool-icons img {
+         width: 28px;
+         height: 28px;
+     }
+
+     #experience .container {
+         padding-left: 15px;
+         padding-right: 15px;
      }
  }
 
@@ -194,14 +261,6 @@
      margin: 3rem 0;
  }
 
- .success-chat-inactive {
-     display: none;
- }
-
- .success-chat-active {
-     display: block;
-     height: 20vh;
- }
 
  #navbar {
      position: fixed;
@@ -210,44 +269,28 @@
      transition: top 0.3s ease;
  }
 
- .success-message-holder {
-     display: flex;
-     flex-direction: column;
-     width: 40%;
-     margin: auto;
-     text-align: center;
-     height: 100%;
-     justify-content: center;
-     background-color: crimson;
-     border-radius: 20px;
- }
+ 
 
 
  /* ===== EXPERIENCE SLIDER ===== */
 
  .slide-wrapper {
      position: relative;
-     display: grid;
-     /* Stack slides using grid */
-     grid-template-columns: 1fr;
-     align-items: start;
      width: 100%;
      overflow: hidden;
-     /* Keeps sliding cards from being visible outside wrapper */
  }
 
  .experience-slide {
-     grid-area: 1 / 1 / 2 / 2;
-     /* All slides occupy the exact same grid cell */
+     position: absolute;
+     top: 0;
+     left: 0;
      width: 100%;
-     /* Remove position: absolute if it was there */
-     /* Remove top/left if they were there */
+     will-change: transform, opacity;
  }
 
  .experience-card {
      max-width: 900px;
      margin: 0 auto;
-     /* Keep it centered */
      padding: 40px;
      background: #111;
      border-radius: 16px;
@@ -259,4 +302,186 @@
      width: 36px;
      height: 36px;
      object-fit: contain;
+ }
+
+ /* ===== FOOTER STYLES ===== */
+ .footer-section {
+     background-color: rgba(0, 0, 0, 0.3);
+     padding: 3rem 0 1rem;
+     margin-top: 4rem;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+/* ===== Tablet (768px–1024px) scaling ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Hero title and subtitle scale */
+    .hero-title {
+        font-size: clamp(2.8rem, 6vw, 4rem);
+        line-height: 1.1;
+    }
+    .hero-title-small {
+        font-size: clamp(1rem, 2.2vw, 1.25rem);
+    }
+
+    /* Experience card sizing */
+    .experience-card {
+        max-width: 720px;
+        padding: 32px;
+    }
+    .tool-icons img {
+        width: 32px;
+        height: 32px;
+    }
+    #experience .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Ensure slide wrapper clips properly */
+    .slide-wrapper {
+        overflow: hidden;
+    }
+}
+ .footer-heading {
+     font-size: 1.1rem;
+     font-weight: 600;
+     margin-bottom: 1.5rem;
+     color: #fff;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+ }
+
+ .footer-text {
+     font-size: 0.9rem;
+     line-height: 1.6;
+     color: rgba(255, 255, 255, 0.7);
+     margin-bottom: 1.5rem;
+ }
+
+ .footer-social {
+     display: flex;
+     gap: 1rem;
+     margin-top: 1rem;
+ }
+
+ .footer-social-link {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     width: 36px;
+     height: 36px;
+     background-color: rgba(255, 255, 255, 0.1);
+     border-radius: 50%;
+     transition: all 0.3s ease;
+ }
+
+ .footer-social-link:hover {
+     background-color: rgba(255, 255, 255, 0.2);
+     transform: translateY(-3px);
+ }
+
+ .footer-links {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .footer-links li {
+     margin-bottom: 0.75rem;
+ }
+
+ .footer-links a {
+     color: rgba(255, 255, 255, 0.7);
+     text-decoration: none;
+     font-size: 0.9rem;
+     transition: color 0.3s ease;
+ }
+
+ .footer-links a:hover {
+     color: #fff;
+     padding-left: 5px;
+ }
+
+ .footer-contact {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .footer-contact li {
+     margin-bottom: 1rem;
+     color: rgba(255, 255, 255, 0.7);
+     font-size: 0.9rem;
+ }
+
+ .footer-contact strong {
+     color: #fff;
+     display: block;
+     margin-bottom: 0.25rem;
+ }
+
+ .footer-contact a {
+     color: rgba(255, 255, 255, 0.7);
+     text-decoration: none;
+     transition: color 0.3s ease;
+ }
+
+ .footer-contact a:hover {
+     color: #fff;
+ }
+
+ .footer-divider {
+     border-color: rgba(255, 255, 255, 0.1);
+     margin: 2rem 0 1.5rem;
+ }
+
+ .footer-copyright {
+     color: rgba(255, 255, 255, 0.5);
+     font-size: 0.85rem;
+     padding: 0.5rem 0;
+ }
+
+ .footer-legal {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     gap: 1.5rem;
+     justify-content: center;
+ }
+
+ .footer-legal li {
+     display: inline;
+ }
+
+ .footer-legal a {
+     color: rgba(255, 255, 255, 0.5);
+     text-decoration: none;
+     font-size: 0.85rem;
+     transition: color 0.3s ease;
+ }
+
+ .footer-legal a:hover {
+     color: #fff;
+ }
+
+ @media (max-width: 768px) {
+     .footer-section {
+         padding: 2rem 0 1rem;
+     }
+
+     .footer-heading {
+         font-size: 1rem;
+         margin-bottom: 1rem;
+     }
+
+     .footer-legal {
+         justify-content: center;
+         margin-top: 1rem;
+     }
+
+     .col-md-6.text-md-start,
+     .col-md-6.text-md-end {
+         text-align: center !important;
+     }
  }

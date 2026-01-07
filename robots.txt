@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: */contact-form*
+
+Sitemap: https://bib3k.me/sitemap.xml

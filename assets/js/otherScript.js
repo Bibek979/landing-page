@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Navbar hiding logic 
     let lastScrollY = window.scrollY;
     const navBar = document.getElementById("navbar");
+    let scrollTimeout;
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > lastScrollY) {
@@ -10,36 +11,105 @@ document.addEventListener("DOMContentLoaded", () => {
             navBar.style.top = "0px";
         }
         lastScrollY = window.scrollY;
+
+        // Clear existing timeout
+        clearTimeout(scrollTimeout);
+
+        // Show navbar after scrolling stops for 1.5 seconds
+        scrollTimeout = setTimeout(() => {
+            navBar.style.top = "0px";
+        }, 1500);
     });
 });
 
 // Form validation logic
-    var formdetails;
+  var formdetails;
 
-    function formValidation() {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const message = document.getElementById("textmessage").value;
-        
-        if(!name||!email||!phone) {
-            return false;
-        }
-        else {
-            formdetails = {
-                "Name": name, "Email": email, "Contact": phone, "Message": message
-            };
-            return true;
-        }
+  function formValidation() {
+    const nameEl = document.getElementById("name");
+    const emailEl = document.getElementById("email");
+    const phoneEl = document.getElementById("phone");
+    const msgEl = document.getElementById("textmessage");
+    const honeypotEl = document.getElementById("company");
+
+    const name = (nameEl?.value || "").trim();
+    const email = (emailEl?.value || "").trim();
+    const phoneRaw = (phoneEl?.value || "").trim();
+    const message = (msgEl?.value || "").trim();
+    const honeypot = honeypotEl?.value || "";
+
+    const errors = [];
+
+    // Honeypot: if filled, treat as bot and fail silently
+    if (honeypot) {
+      return { ok: false, errors: ["Invalid submission."] };
     }
+
+    // Name validation
+    if (!name || name.length < 2) {
+      errors.push("Please enter your name.");
+    }
+
+    // Email validation (basic)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!email || !emailPattern.test(email)) {
+      errors.push("Please enter a valid email address.");
+    }
+
+    // Phone validation: 7-15 digits allowed
+    const digits = phoneRaw.replace(/[^\d]/g, "");
+    if (!digits || digits.length < 7 || digits.length > 15) {
+      errors.push("Please enter a valid phone number (7-15 digits).");
+    }
+
+    if (errors.length) {
+      return { ok: false, errors };
+    }
+
+    formdetails = {
+      Name: name,
+      Email: email,
+      Contact: phoneRaw,
+      Message: message
+    };
+
+    return { ok: true, data: formdetails };
+  }
 
 
     
+
+  // Slide show logic
+
   const slides = document.querySelectorAll(".experience-slide");
   const wrapper = document.querySelector(".slide-wrapper");
 
   let current = 0;
   let autoTimer;
+
+  // Ensure absolute stacking and set initial wrapper height
+  slides.forEach(s => {
+    s.style.position = "absolute";
+    s.style.top = "0";
+    s.style.left = "0";
+    s.style.width = "100%";
+  });
+  // Set wrapper height to current slide's height to avoid collapse
+  if (slides[0]) {
+    wrapper.style.height = slides[0].offsetHeight + "px";
+  }
+
+  // Update wrapper height on resize (debounced)
+  let resizeTimer;
+  function setWrapperHeightToCurrent() {
+    if (slides[current]) {
+      wrapper.style.height = slides[current].offsetHeight + "px";
+    }
+  }
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setWrapperHeightToCurrent, 150);
+  });
 
   // Initial state
   gsap.set(slides, { xPercent: 100, opacity: 0 });
@@ -69,6 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 0.8,
       ease: "power3.inOut"
     });
+
+    // Animate wrapper height to match incoming slide
+    const nextHeight = slides[next].offsetHeight;
+    gsap.to(wrapper, { height: nextHeight, duration: 0.3, ease: "power1.out" });
 
     current = next;
   }
