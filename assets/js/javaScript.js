@@ -44,7 +44,7 @@ sideMenuLinks.forEach(link => {
 // Store button link handler
 const shopButton = document.getElementById("store-button");
 shopButton.addEventListener("click", function () {
-  window.location.href = "https://shop.bib3k.me";
+  window.open("https://shop.bib3k.me", "_blank");
 })
 
 
