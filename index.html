@@ -4,17 +4,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-    content="Meet Bibekananda Besra, an Artificial Intelligence student seeking specialist roles in AI. Discover academic projects, technical skills, and interests.">
+    content="Meet Bibekananda Besra, an Artificial Intelligence student. Cyber-tech portfolio showcasing specialized roles in AI.">
   <meta name="author" content="Bibekananda Besra">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon">
   <link rel="icon" href="/favicon2.png" sizes="32x32" type="image/png">
-  <title>Bibekananda Besra | Artificial Intelligence Student</title>
+  <title>Bibekananda Besra | AI Engineered</title>
+
+  <!-- Bootstrap & Fonts -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="assets/css/design.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,25 +34,23 @@
         <img src="./assets/img/hamburger.png" alt="Menu"></button>
     </div>
     <div class="container" id="navbar-big-scn">
-      <button class="nav-button" onclick="location.href='#contact'">Contact ☎️</button>
-      <button class="nav-button" id="store-button">Store 🏬</button>
-      <button class="nav-button" onclick="window.open('https://blog.bib3k.me', '_blank')">Blogs 📰</button>
-      <button class="nav-button" onclick="downloadResume()">Resume 📜</button>
+      <button class="nav-button" onclick="location.href='#contact'">CMD:CONTACT</button>
+      <button class="nav-button" id="store-button">STORE_V1</button>
+      <button class="nav-button" onclick="window.open('https://blog.bib3k.me', '_blank')">LOGS / BLOG</button>
+      <button class="nav-button" onclick="downloadResume()">RESUME.PDF</button>
     </div>
   </nav>
 
   <!-- Side Menu -->
   <div id="side-menu" class="side-menu">
     <nav class="side-menu-nav">
-      <a href="#hero-section" class="side-menu-link">Home</a>
-      <a href="https://blog.bib3k.me" target="_blank" class="side-menu-link">Blog</a>
-      <a href="https://shop.bib3k.me" target="_blank" class="side-menu-link">Shop</a>
-      <a href="#experience" class="side-menu-link">Experience</a>
-      <a href="#projects" class="side-menu-link">Projects</a>
-      <a href="#testimonials" class="side-menu-link">Testimonials</a>
-      <a href="#milestones" class="side-menu-link">Milestones</a>
-      <a href="#contact" class="side-menu-link">Contact</a>
-      <button class="side-menu-link resume-btn" type="button" onclick="downloadResume()">Resume 🖨️</button>
+      <a href="#hero-section" class="side-menu-link">/HOME</a>
+      <a href="https://blog.bib3k.me" target="_blank" class="side-menu-link">/LOGS</a>
+      <a href="https://shop.bib3k.me" target="_blank" class="side-menu-link">/STORE</a>
+      <a href="#experience" class="side-menu-link">/EXP</a>
+      <a href="#projects" class="side-menu-link">/PROJECTS</a>
+      <a href="#contact" class="side-menu-link">/CONTACT</a>
+      <button class="side-menu-link" onclick="downloadResume()">[DOWNLOAD RESUME]</button>
     </nav>
   </div>
 
@@ -52,111 +58,133 @@
   <div id="menu-overlay" class="menu-overlay"></div>
 
   <!-- Hero Section -->
-  <section id="hero-section" class="mobile-img-controller blur-edges">
-    <div class="container">
-      <div class="hero-title-container">
-        <h1 class="hero-title">Bibek<span>ananda Besra</span></h1>
-        <p class="hero-title-small">CS Student | Pondicherry University</p>
-      </div>
-      <div class="col-lg-6 hero-section-intro" data-aos="fade-right">
-        <p class="hero-subtitle">
-          👨‍💻 A CS student exploring all the aspects of computing machines and their functioning. <br><br>
+  <section id="hero-section">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <!-- Hero Text -->
+        <div class="col-lg-7 order-2 order-lg-1">
+          <div class="hero-glass-card" data-aos="fade-right">
 
-          🍩 One who strives towards creating simple, efficient and robust System.<br><br>
+            <div class="hero-card-border">
+              <span class="system-status">SYSTEM STATUS: ONLINE</span>
 
-          🔥 The person who wants to simplify technologies and make it accessibile for all.
-        </p>
-        <a href="#contact" class="btn-light-custom mt-4">Let's Talk</a>
+              <div class="hero-title-container">
+                <p class="hero-title-small">CS Student @ Pondicherry University</p>
+                <h1 class="hero-title">BIBEKANANDA<br>BESRA.</h1>
+              </div>
+
+              <div class="hero-subtitle mt-4">
+                <div style="margin-bottom: 8px"><span style="color:var(--neon-cyan)">></span> Exploring Architecture of
+                  Computing Machines.</div>
+                <div style="margin-bottom: 8px"><span style="color:var(--neon-purple)">></span> Building Robust,
+                  Efficient Systems.</div>
+                <div><span style="color:var(--neon-green)">></span> Demystifying Tech for Everyone.</div>
+              </div>
+
+              <div class="hero-actions d-flex align-items-end mt-5">
+                <a href="#contact" class="btn-light-custom" style="margin-top:0">INITIALIZE_CHAT</a>
+                <a href="#projects" class="btn-outline-custom pb-1">VIEW_ARCHIVES</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="col-lg-5 order-1 order-lg-2 text-center position-relative">
+          <div class="hero-img-wrapper" data-aos="zoom-in" data-aos-delay="200">
+            <div class="glass-circle-bg"></div> <!-- This will be the grid -->
+            <img src="./assets/img/happy-man.png" alt="Bibekananda Besra" class="hero-profile-img">
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- Experience Section (Fixed Layout) -->
   <section id="experience">
-  <div class="container text-center">
-    <h2 class="mb-5">EXPERIENCE</h2>
+    <div class="container text-center">
+      <h2 class="mb-5" data-aos="fade-up">JOB_EXPERIENCE_LOG</h2>
 
-    <div class="slide-wrapper">
+      <div class="slide-wrapper">
 
-      <!-- Slide 1 -->
-      <div class="experience-slide">
-        <div class="experience-card mx-auto">
-          <h4 class="mb-3">BANGORA BAPTIST CHURCH</h4>
-          <p class="text-muted mb-4">Video Production • Youtube Manager</p>
+        <!-- Slide 1: Video -->
+        <div class="experience-slide">
+          <div class="experience-card mx-auto">
+            <h4 class="mb-3">BANGORA BAPTIST CHURCH</h4>
+            <p class="text-muted mb-4"><span class="mono-tag">VIDEO</span> <span class="mono-tag">MGMT</span></p>
 
-          <div class="tool-icons d-flex justify-content-center align-items-center gap-3">
-            <img src="./assets/img/DaVinci_Resolve_Studio.png" alt="DaVinci Resolve">
-            <img src="./assets/img/Adobe_Photoshop_CC_2026_icon.svg" alt="Photoshop">
-            <img src="./assets/img/icons8-youtube.png" alt="YouTube">
-            <img src="./assets/img/blackmagic camera.webp" alt="Camera">
+            <div class="tool-icons">
+              <img src="./assets/img/DaVinci_Resolve_Studio.png" alt="DaVinci">
+              <!-- Central Hero Icon -->
+              <img src="./assets/img/icons8-youtube.png" class="hero-icon" alt="YouTube">
+              <img src="./assets/img/Adobe_Photoshop_CC_2026_icon.svg" alt="Photoshop">
+            </div>
+
+            <p class="mt-4 text-muted small experience-description">
+              Managed media roles delivering high-quality video content.
+              Executed roles: <strong>Videographer</strong>, <strong>Editor</strong>, and <strong>Designer</strong>.
+              Optimized channel growth reaching <strong>5 Lakh+</strong> viewers.
+            </p><a class="modify-link-style" href="http://youtube.com">EXECUTE: VIEW_CHANNEL</a>
           </div>
-
-          <p class="mt-4 text-muted small">
-            A voluntary role in which I managed the media role where I delivered quality videos for youtube.
-            Handled the <span class="strong">Videographer role</span>, <span class="strong">Editor role</span> and <span class="strong">Designer role</span>.
-            Added visual effects, sound and other elements to enhance the final product.
-            And finally I handled the YouTube Studio <span class="strong">optimizing videos</span> such that it has already reached <span class="strong">5</span> lakh viewers.
-          </p><a class="modify-link-style" href="http://youtube.com">check out</a>
         </div>
-      </div>
 
-      <!-- Slide 2 -->
-      <div class="experience-slide">
-        <div class="experience-card mx-auto">
-          <h4 class="mb-3">WEB BUILDER</h4>
-          <p class="text-muted mb-4">Frontend • Backend • Hosting • SEO</p>
+        <!-- Slide 2: Web -->
+        <div class="experience-slide">
+          <div class="experience-card mx-auto">
+            <h4 class="mb-3">WEB BUILDER</h4>
+            <p class="text-muted mb-4"><span class="mono-tag">FULL_STACK</span> <span class="mono-tag">SEO</span></p>
 
-          <div class="tool-icons d-flex justify-content-center align-items-center gap-3">
-            <img src="./assets/img/html.png" alt="HTML">
-            <img src="./assets/img/bootstrap-fill.png" alt="bootstrap">
-            <img src="./assets/img/js.png" alt="JavaScript">
-            <img src="./assets/img/react.png" alt="React">
-            <img src="./assets/img/n8n-color.png" alt="n8n icon" srcset="">
+            <div class="tool-icons">
+              <img src="./assets/img/html.png" alt="HTML">
+              <img src="./assets/img/react.png" class="hero-icon" alt="React">
+              <img src="./assets/img/n8n-color.png" alt="n8n">
+            </div>
+
+            <p class="mt-4 text-muted small experience-description">
+              Developed high-performance web apps on Azure/Linux/Docker.
+              Integrated CI/CD pipelines via GitHub Pages & Netlify.
+              Focus: <strong>Performance Benchmarking</strong> & <strong>Accessibility</strong>.
+            </p><a class="modify-link-style" href="http://youtube.com">EXECUTE: VIEW_WORK</a>
           </div>
-
-          <p class="mt-4 text-muted small">
-            Built responsive websites, portfolio pages, and web applications with a focus on
-            performance, SEO, and clean UI. Used Microsoft Azure, n8n, docker, nginx and linux for hosting my data and blog page.
-            For fast access and seamless update used github, git pages, netlify and cloudflare to host my website.
-            Topped all this with tests and benchmarking for fast and bug free experience.
-          </p><a class="modify-link-style" href="http://youtube.com">check out</a>
         </div>
-      </div>
 
-      <!-- Slide 3 -->
-      <div class="experience-slide">
-        <div class="experience-card mx-auto">
-          <h4 class="mb-3">LINUX HOME LAB</h4>
-          <p class="text-muted mb-4">Proxmox • Docker • Self-Hosting • Self-Hosting</p>
+        <!-- Slide 3: Lab -->
+        <div class="experience-slide">
+          <div class="experience-card mx-auto">
+            <h4 class="mb-3">LINUX HOME LAB</h4>
+            <p class="text-muted mb-4"><span class="mono-tag">SYS_ADMIN</span> <span class="mono-tag">SELF_HOST</span>
+            </p>
 
-          <div class="tool-icons d-flex justify-content-center align-items-center gap-3">
-            <img src="./assets/img/linux.png" alt="Linux logo">
-            <img src="./assets/img/docker.png" alt="Docker logo">
-            <img src="./assets/img/proxmox.png" alt="Proxmox logo">
-            <img src="./assets/img/ollama.png" alt="Ollama logo" srcset="">
+            <div class="tool-icons">
+              <img src="./assets/img/docker.png" alt="Docker">
+              <img src="./assets/img/linux.png" class="hero-icon" alt="Linux">
+              <img src="./assets/img/proxmox.png" alt="Proxmox">
+              <img src="./assets/img/ollama.png" style="display:none" alt="Ollama">
+            </div>
+
+            <p class="mt-4 text-muted small experience-description">
+              Deployed Proxmox virtualization cluster for remote dev environments.
+              Hosted local LLMs (Ollama) and media servers (Jellyfin).
+              Implemented automated backup solutions.
+            </p><a class="modify-link-style" target="_blank"
+              href="https://www.youtube.com/@bangorabaptistchurch">EXECUTE: VIEW_SETUP</a>
           </div>
-
-          <p class="mt-4 text-muted small">
-            Repurposed an old laptop into home server exposing it to the internet for backup solution, remote access, and entertainment.
-            Used Proxmox virtual machines for remote machines and Ollama for having a personal LLM for personal use.
-            And for non-essential tasks like file sharing and backup used Proxmox container like samba and JellyFin.
-          </p><a class="modify-link-style" target="_blank" href="https://www.youtube.com/@bangorabaptistchurch">check out</a>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Blog Section -->
   <section id="projects">
     <div class="container text-center">
-      <h2>RECENT BLOGS</h2>
+      <h2 data-aos="fade-up">LATEST_LOGS</h2>
       <div class="row g-4">
         <!-- Project 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card">
-            <div class="project-header">HOMELABBING</div>
+            <div class="project-header">Topic: HOMELABBING // ID: 01</div>
             <img src="assets/img/pexels-photo-1597776.jpeg" class="project-img" alt="Homelabbing">
             <div class="project-body">
               <p>Building and maintaining a home lab server for learning and hosting personal services. Utilizing
@@ -165,9 +193,9 @@
           </div>
         </div>
         <!-- Project 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
           <div class="project-card">
-            <div class="project-header">WEB DESIGN</div>
+            <div class="project-header">Topic: WEB_DESIGN // ID: 02</div>
             <img src="assets/img/pexels-photo-546819.jpeg" class="project-img" alt="Web Design">
             <div class="project-body">
               <p>Creating responsive and modern websites for clients. Focusing on user experience, performance, and
@@ -176,9 +204,9 @@
           </div>
         </div>
         <!-- Project 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
           <div class="project-card">
-            <div class="project-header">ELECTRONICS</div>
+            <div class="project-header">Topic: HARDWARE // ID: 03</div>
             <img src="assets/img/pexels-photo-6754839.jpeg" class="project-img" alt="Electronics">
             <div class="project-body">
               <p>Repairing and modifying electronic devices. Expertise in soldering, circuit analysis, and hardware
@@ -193,35 +221,72 @@
   <!-- Testimonials Section -->
   <section id="testimonials">
     <div class="container text-center">
-      <h2>TESTIMONIALS</h2>
+      <h2 data-aos="fade-up">USER_FEEDBACK</h2>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Thank you for your excellent service.
-              He is great at any project I consult him with. Thank You!"</p>
-            <img src="https://ui-avatars.com/api/?name=Rupali+Das&background=random" class="testimonial-img" alt="User">
-            <h6 class="mt-3 mb-0 test-font-user">Rupali Das</h6>
-            <small class="test-font-user">Ranchi, JH</small>
+
+        <!-- Review 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="cyber-review-card accent-cyan">
+            <div class="review-header">
+              <div class="review-avatar">RD</div>
+              <div class="review-meta text-start">
+                <h5>Rupali Das</h5>
+                <small>Ranchi, JH</small>
+              </div>
+            </div>
+
+            <div class="tech-rating">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+
+            <p class="review-text">"Thank you for your excellent service. He is great at any project I consult him with.
+              Thank You!"</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"I was very weak in programming until I met Bibek. Highly recommended and Thank You."</p>
-            <img src="https://ui-avatars.com/api/?name=Jonathan+Bose&background=random" class="testimonial-img"
-              alt="User">
-            <h6 class="mt-3 mb-0 test-font-user">Jonathan Bose</h6>
-            <small class="test-font-user">Kochi, Kerala</small>
+
+        <!-- Review 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="cyber-review-card accent-purple">
+            <div class="review-header">
+              <div class="review-avatar">JB</div>
+              <div class="review-meta text-start">
+                <h5>Jonathan Bose</h5>
+                <small>Kochi, Kerala</small>
+              </div>
+            </div>
+
+            <div class="tech-rating">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+
+            <p class="review-text">"I was very weak in programming until I met Bibek. Highly recommended and Thank You."
+            </p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="testimonial-card">
-            <p class="testimonial-text">"Highly professional and delivery has been within the promised time. Thank you
-              so much for the software."</p>
-            <img src="https://ui-avatars.com/api/?name=Naveen+K&background=random" class="testimonial-img" alt="User">
-            <h6 class="mt-3 mb-0 test-font-user">Naveen K</h6>
-            <small class="test-font-user">Bangalore, Karnataka</small>
+
+        <!-- Review 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="cyber-review-card accent-green">
+            <div class="review-header">
+              <div class="review-avatar">NK</div>
+              <div class="review-meta text-start">
+                <h5>Naveen K</h5>
+                <small>Bangalore, Karnataka</small>
+              </div>
+            </div>
+
+            <div class="tech-rating">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span
+                class="star">★</span><span class="star">★</span>
+            </div>
+
+            <p class="review-text">"Highly professional and delivery has been within the promised time. Thank you so
+              much for the software."</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -229,8 +294,8 @@
   <!-- Milestones Section -->
   <section id="milestones">
     <div class="container milestones-container text-center">
-      <h2>MILESTONES</h2>
-      <div class="milestone-bar">
+      <h2 data-aos="fade-up">STATS_OVERVIEW</h2>
+      <div class="milestone-bar" data-aos="zoom-in">
         <div class="milestone-item">
           <div class="milestone-circle circle-yellow">15+</div>
           <span class="milestone-text">Years Experience</span>
@@ -250,32 +315,32 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="container" id="contact-form-div">
-      <h2>LET'S CHAT</h2>
-      <div class="row">
+      <h2 data-aos="fade-up">INITIATE_UPLINK</h2>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-6">
           <form id="contact-form">
             <div class="mb-3">
-              <label class="form-label text-uppercase small">Name:</label>
+              <label class="form-label text-uppercase small">> ENTER_NAME:</label>
               <input type="text" class="form-control" placeholder="Rahul Das" id="name">
             </div>
             <div class="mb-3">
-              <label class="form-label text-uppercase small">Email:</label>
+              <label class="form-label text-uppercase small">> ENTER_EMAIL:</label>
               <input type="email" class="form-control" id="email" aria-label="email">
             </div>
             <div class="mb-3">
-              <label class="form-label text-uppercase small">Phone Number:</label>
+              <label class="form-label text-uppercase small">> PHONE_NUMBER:</label>
               <input type="tel" class="form-control" id="phone" aria-label="phone number">
             </div>
             <div class="mb-3">
-              <label class="form-label text-uppercase small">Message:</label>
+              <label class="form-label text-uppercase small">> TRASNSMISSION_DATA:</label>
               <textarea class="form-control" rows="4" id="textmessage" aria-label="Message"></textarea>
             </div>
             <input type="text" name="company" style="display: none;" id="company">
-            <button type="submit" class="btn-submit" id="contactsubmitbtn">Submit</button>
+            <button type="submit" class="btn-submit" id="contactsubmitbtn">SEND_PACKET</button>
           </form>
         </div>
         <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center mt-5 mt-lg-0">
-          <h4 class="mb-4">CONNECT WITH ME ~</h4>
+          <h4 class="mb-4">NO_SIGNAL? TRY_THESE:</h4>
           <div>
             <a href="https://www.linkedin.com/in/bibekananda-besra" target="_blank" class="social-circle">
               <img src="./assets/img/icons8-linkedin.png" width="24" alt="LinkedIn">
@@ -298,19 +363,21 @@
       <div class="row g-4">
         <!-- About Column -->
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-heading">About Me</h5>
-          <p class="footer-text">
-            Computer Science student at Pondicherry University studying AI, web development, and system administration. 
-            Passionate about building efficient solutions and making technology accessible.
+          <h5 class="footer-heading">USER_INFO</h5>
+          <p class="footer-text" style="color:var(--text-dim)">
+            Computer Science student // AI Specialist // System Admin.
+            Building the future, one packet at a time.
           </p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/in/bibekananda-besra" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/bibekananda-besra" target="_blank" class="footer-social-link"
+              aria-label="LinkedIn">
               <img src="./assets/img/icons8-linkedin.png" width="20" alt="LinkedIn">
             </a>
             <a href="https://github.com/Bibek979" target="_blank" class="footer-social-link" aria-label="GitHub">
               <img src="./assets/img/github.png" width="20" alt="GitHub">
             </a>
-            <a href="https://www.youtube.com/@bibekanandabesra6415" target="_blank" class="footer-social-link" aria-label="YouTube">
+            <a href="https://www.youtube.com/@bibekanandabesra6415" target="_blank" class="footer-social-link"
+              aria-label="YouTube">
               <img src="./assets/img/icons8-youtube.png" width="20" alt="YouTube">
             </a>
           </div>
@@ -318,73 +385,73 @@
 
         <!-- Quick Links Column -->
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-heading">Quick Links</h5>
+          <h5 class="footer-heading">NAVIGATION</h5>
           <ul class="footer-links">
-            <li><a href="#hero-section">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="https://blog.bib3k.me" target="_blank">Blog</a></li>
+            <li><a href="#hero-section">/root/home</a></li>
+            <li><a href="#experience">/root/exp</a></li>
+            <li><a href="#projects">/root/projects</a></li>
+            <li><a href="#testimonials">/root/feedback</a></li>
+            <li><a href="#contact">/root/contact</a></li>
+            <li><a href="https://blog.bib3k.me" target="_blank">/ext/blog</a></li>
           </ul>
         </div>
 
         <!-- Services Column -->
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-heading">Services</h5>
+          <h5 class="footer-heading">DAEMONS</h5>
           <ul class="footer-links">
-            <li><a href="#contact">Web Development</a></li>
-            <li><a href="#contact">Video Production</a></li>
-            <li><a href="#contact">Server Setup & Hosting</a></li>
-            <li><a href="#contact">SEO Optimization</a></li>
-            <li><a href="#contact">Electronics Repair</a></li>
-            <li><a href="https://shop.bib3k.me" target="_blank">Shop Products</a></li>
+            <li><a href="#contact">Web_Dev.exe</a></li>
+            <li><a href="#contact">Video_Prod.sh</a></li>
+            <li><a href="#contact">Server_Init.py</a></li>
+            <li><a href="#contact">SEO_Optimize.js</a></li>
+            <li><a href="#contact">Hardware_Fix.bin</a></li>
           </ul>
         </div>
 
         <!-- Contact Column -->
         <div class="col-lg-3 col-md-6">
-          <h5 class="footer-heading">Get In Touch</h5>
-          <ul class="footer-contact">
+          <h5 class="footer-heading">PING_ME</h5>
+          <ul class="footer-contact" style="list-style:none; padding:0; color:var(--text-dim)">
             <li>
-              <strong>Email:</strong>
+              <strong style="color:var(--neon-white)">MAIL:</strong>
               <a href="mailto:bibekmeananda@gmail.com">Bibekmeananda@gmail.com</a>
             </li>
-            <li>
-              <strong>Location:</strong>
-              Pondicherry University, India
+            <li class="mt-2">
+              <strong style="color:var(--neon-white)">LOC:</strong>
+              Pondicherry University, IN
             </li>
-            <li>
-              <strong>Availability:</strong>
-              Enquire through the contact form
+            <li class="mt-2">
+              <strong style="color:var(--neon-white)">STAT:</strong>
+              Available
             </li>
           </ul>
         </div>
       </div>
 
-      <hr class="footer-divider">
+      <hr class="footer-divider" style="border-color:#333">
 
       <!-- Bottom Footer -->
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
-          <p class="footer-copyright mb-0">
-            &copy; 2025 Bibekananda Besra. All rights reserved.
+          <p class="footer-copyright mb-0" style="color:var(--text-dim)">
+            &copy; 2025 Bibekananda Besra. [SYSTEM_SECURE]
           </p>
         </div>
         <div class="col-md-6 text-center text-md-end">
           <ul class="footer-legal">
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-            <li><a href="#sitemap">Sitemap</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#sitemap">Map</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/javaScript.js"></script>
   <script src="assets/js/otherScript.js"></script>
@@ -392,7 +459,8 @@
   <div id="toast-area" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100"></div>
   <script>
     AOS.init({
-      duration: 800,
+      duration: 600,
+      easing: 'ease-out-cubic',
       once: true
     });
   </script>
