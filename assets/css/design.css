@@ -67,11 +67,6 @@ h6 {
     align-items: center;
     position: relative;
     padding-top: 80px;
-    background-image: url("../img/happy-man.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
 }
 
 .nav-button {

@@ -10,16 +10,10 @@
          padding: 0;
      }
 
-     #hero-section {
+     /* #hero-section {
          padding-top: 72px;
-         background-image: url("../img/happy-man-small.png");
-         background-size: contain;
-         background-repeat: no-repeat;
-         background-attachment: scroll;
-         background-position-x: right;
-         background-position-y: bottom;
          align-items: end;
-     }
+     } */
 
      .hero-img-block {
          display: none;
