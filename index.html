@@ -18,7 +18,14 @@
 </head>
 
 <body>
-
+ 
+  <!-- Site-wide maintenance banner -->
+  <div class="site-banner" role="status" aria-live="polite">
+    <div class="container d-flex justify-content-center align-items-center">
+      <small>Heads up — a few features are temporarily under maintenance. Thanks for your patience!</small>
+    </div>
+    <button class="site-banner-close" aria-label="Dismiss banner">&times;</button>
+  </div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md fixed-top" id="navbar">
     <div class="navbar-mobile">
@@ -395,6 +402,30 @@
       duration: 800,
       once: true
     });
+  </script>
+  <script>
+    (function(){
+      const banner = document.querySelector('.site-banner');
+      const btn = document.querySelector('.site-banner-close');
+      if(!banner || !btn) return;
+
+      // Close handler — hide banner and reset banner height variable
+      btn.addEventListener('click', ()=>{
+        banner.classList.remove('active');
+        document.documentElement.style.setProperty('--site-banner-height','0px');
+        setTimeout(()=> banner.remove(), 300);
+      });
+
+      // Show banner 2s after full page load
+      window.addEventListener('load', ()=>{
+        setTimeout(()=>{
+          // set the banner height first so the navbar moves down
+          document.documentElement.style.setProperty('--site-banner-height','36px');
+          // then reveal the banner
+          banner.classList.add('active');
+        }, 2000);
+      });
+    })();
   </script>
 </body>
 
